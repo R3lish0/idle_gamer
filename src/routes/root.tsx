@@ -1,43 +1,20 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import { Box, Typography } from '@mui/material';
+import BGimage from "../assets/background.gif"
+
 export default function Root() {
-    return (
-      <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href={`/contacts/1`}>Your Name</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div id="detail"></div>
-      </>
-    );
-  }
+  return (
+    <Box sx={{height:'100vh',width:"100wh",backgroundImage:`url(${BGimage})`,backgroundPosition:"bottom 1000px right 1000px"}}>
+      <Box sx={{width:"50%",margin:"auto",paddingTop:"15em"}}>
+        <Typography variant="h3" sx={{textAlign:"center",marginBottom:"0.5em"}}>Monkee Game</Typography>
+        <Stack spacing={4} sx={{maxWidth:"25em",margin:"auto"}}>
+        <Button variant="contained" href="/WorldOne" sx={{height:"5em",backgroundColor:"#1E555C"}}><Typography variant="h5" style={{fontWeight:"bold",margin:"auto",marginTop:"0.7em"}}>Start</Typography></Button>
+        <Button variant="contained" href="/Settings" sx={{height:"5em",backgroundColor:"#EDB183"}}><Typography variant="h5" style={{fontWeight:"bold",margin:"auto",marginTop:"0.7em"}}>Settings</Typography></Button>
+        <Button variant="contained" href="/Quit" sx={{height:"5em",backgroundColor:"#F15152"}}><Typography variant="h5" style={{fontWeight:"bold",margin:"auto",marginTop:"0.7em"}}>Quit</Typography></Button>
+        </Stack>  
+      </Box>
+    </Box>
+  );
+}

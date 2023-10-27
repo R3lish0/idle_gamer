@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
-import "./index.css";
+import WorldOne from "./routes/worldOne";
+
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path:"contacts/:contactId",
-    element: <Contact />
+    path:"/worldOne",
+    element: <WorldOne />
   }
 ]);
 
